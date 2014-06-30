@@ -1,0 +1,40 @@
+#/bin/bash
+
+basename=$1 # 引数からファイル名を受け取る
+filename=${basename%.*} # 拡張子を取った名前
+pdfflag=1
+dviflag=1
+
+if [  ${filename}.tex ]; then
+  # tex -> dvi
+  platex ${filename}.tex
+else
+  echo "ファイル:${filename}.tex が存在しません"
+  dviflag=0
+  pdfflag=0
+fi
+
+if [  ${filename}.dvi ]; then
+  # dvi -> pdf
+  dvipdfmx ${filename}.dvi
+elif [$dviflag != 0 ]; then
+  echo "${filename}.dvi が作成できていないようです "
+  pdfflag=0
+fi
+
+if [  ${filename}.pdf ]; then
+  # pdf を開く
+  evince ${filename}.pdf & 
+elif [ $pdfflag != 0 ]; then
+  echo "${filename}.pdf を開けません"
+fi
+
+if [  ${filename}.aux ]; then
+  # aux を削除
+  rm ${filename}.aux
+fi
+
+if [  ${filename}.log ]; then
+  # log を削除
+  rm ${filename}.log
+fi
