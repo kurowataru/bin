@@ -1,0 +1,21 @@
+#ln -Fisv $HOME/local/dotfiles/.emacs.d $HOME
+#ln -Fisv $HOME/local/dotfiles/.sh.d $HOME
+#ln -Fisv $HOME/local/dotfiles/.vim $HOME
+#ln -Fisv $HOME/local/dotfiles/.zsh.d $HOME
+#ln -Fisv $HOME/local/dotfiles/.bashrc $HOME
+#ln -Fisv $HOME/local/dotfiles/.gitignore_global $HOME
+#ln -Fisv $HOME/local/dotfiles/.mayu $HOME
+#ln -Fisv $HOME/local/dotfiles/.tmux.conf $HOME
+#ln -Fisv $HOME/local/dotfiles/.tmux.d $HOME
+ln -Fisv $HOME/local/dotfiles/.vimrc $HOME
+#ln -Fisv $HOME/local/dotfiles/.gvimrc $HOME
+ln -Fisv $HOME/local/dotfiles/.zshrc $HOME
+#ln -Fisv $HOME/local/dotfiles/.tidyrc $HOME
+
+# ln
+# -d, -F, --directory スーパーユーザがディレクトリに対するハードリンクを
+# 作成することを許可する。(備考: スーパーユーザであっても
+# システムの制限で失敗することがある)
+# -i, --interactive 対象を削除するかどうか確認メッセージを表示する
+# -s, --symbolic ハードリンクの代わりにシンボリックリンクを作成する
+# -v, --verbose print name of each linked file)
