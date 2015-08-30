@@ -10,7 +10,7 @@ ln -Fisv $HOME/local/dotfiles/.tmux.conf $HOME
 ln -Fisv $HOME/local/dotfiles/.vimrc $HOME
 #ln -Fisv $HOME/local/dotfiles/.gvimrc $HOME
 ln -Fisv $HOME/local/dotfiles/.zshrc $HOME
-ln -Fisv &HOME/local/dotfiles/.latexmkrc $HOME
+ln -Fisv $HOME/local/dotfiles/.latexmkrc $HOME
 #ln -Fisv $HOME/local/dotfiles/.tidyrc $HOME
 
 # ln
